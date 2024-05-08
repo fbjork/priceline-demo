@@ -10,7 +10,7 @@ const hotels = connector.OpenAPI("hotels", {
   },
 });
 
-g.datasource(hotels);
+g.datasource(hotels, { namespace: false });
 
 export default config({
   graph: g,
