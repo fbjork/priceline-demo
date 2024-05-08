@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm -r dev"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Fredrik Björk <fredrik@grafbase.com>",
   "license": "ISC",
   "devDependencies": {
-    "@grafbase/sdk": "~0.23.0"
+    "grafbase": "^0.71.4"
   }
 }

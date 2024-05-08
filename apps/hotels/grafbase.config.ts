@@ -1,6 +1,6 @@
 import { graph, connector, config } from "@grafbase/sdk";
 
-const g = graph.Standalone();
+const g = graph.Standalone({ subgraph: true });
 
 const hotels = connector.OpenAPI("hotels", {
   schema:

@@ -1,6 +1,13 @@
 import { graph, connector, config } from "@grafbase/sdk";
 
-const g = graph.Standalone();
+const typeDefs = `#graphql
+  type Hotel @key(fields: "hotelId", resolvable: false) {
+    hotelId: String
+    sentiments: GetSentimentsByHotelIds @join(select: "sentimentsByHotelIds(hotelIds: [$hotelId])")
+  }
+`;
+
+const g = graph.Standalone({ typeDefs, subgraph: true });
 
 const ratings = connector.OpenAPI("ratings", {
   schema:
@@ -19,13 +26,4 @@ export default config({
       rules.public();
     },
   },
-  // cache: {
-  //   rules: [
-  //     {
-  //       types: ["Query"], // Cache everything for 60 seconds
-  //       maxAge: 60,
-  //       staleWhileRevalidate: 60,
-  //     },
-  //   ],
-  // },
 });
