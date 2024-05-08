@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      '@grafbase/sdk':
+        specifier: ~0.23.0
+        version: 0.23.0
+
+packages:
+
+  '@grafbase/sdk@0.23.0':
+    resolution: {integrity: sha512-VvnG8+4OAZzULcvTp99wWvJ0rlHlC0hKPc8Ajy5HmWSGDO3xGIFesPdTOpfZMgO3Jjl+LZ0Ls+9khV7qSFWx7w==}
+    engines: {node: '>=16.13.0'}
+
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+
+  type-fest@4.18.2:
+    resolution: {integrity: sha512-+suCYpfJLAe4OXS6+PPXjW3urOS4IoP9waSiLuXfLgqZODKw/aWwASvzqE886wA0kQgGy0mIWyhd87VpqIy6Xg==}
+    engines: {node: '>=16'}
+
+snapshots:
+
+  '@grafbase/sdk@0.23.0':
+    dependencies:
+      dotenv: 16.4.5
+      type-fest: 4.18.2
+
+  dotenv@16.4.5: {}
+
+  type-fest@4.18.2: {}
