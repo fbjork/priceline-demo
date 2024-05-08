@@ -1,0 +1,16 @@
+{
+  "name": "hotels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "grafbase dev --port 4000",
+    "start": "grafbase start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@grafbase/sdk": "~0.24.0"
+  }
+}
