@@ -10,7 +10,7 @@ const ratings = connector.OpenAPI("ratings", {
   },
 });
 
-g.datasource(ratings);
+g.datasource(ratings, { namespace: false });
 
 export default config({
   graph: g,
