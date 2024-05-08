@@ -12,6 +12,10 @@ const hotels = connector.OpenAPI("hotels", {
 
 g.datasource(hotels, { namespace: false });
 
+g.extend("Hotel", (extend) => {
+  extend.key("hotelId", { resolvable: false });
+});
+
 export default config({
   graph: g,
   auth: {
