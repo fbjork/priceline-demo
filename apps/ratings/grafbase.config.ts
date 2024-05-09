@@ -1,7 +1,7 @@
 import { graph, connector, config } from "@grafbase/sdk";
 
 const typeDefs = `#graphql
-  type Hotel @key(fields: "hotelId", resolvable: false) {
+  type Hotel @key(fields: "hotelId") {
     hotelId: String
     sentiments: GetSentimentsByHotelIds @join(select: "sentimentsByHotelIds(hotelIds: [$hotelId])")
   }
